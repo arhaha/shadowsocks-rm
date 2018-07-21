@@ -24,9 +24,17 @@
 from __future__ import absolute_import, division, print_function, \
     with_statement
 
-import os
 import sys
+import socket
 import argparse
+import subprocess
+
+
+def inet_pton(str_ip):
+    try:
+        return socket.inet_pton(socket.AF_INET, str_ip)
+    except socket.error:
+        return None
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='See README')
@@ -37,6 +45,7 @@ if __name__ == '__main__':
     ips = {}
     banned = set()
     for line in sys.stdin:
+
         if 'can not parse header when' in line:
             ip = line.split()[-1].split(':')[0]
             if ip not in ips:
@@ -52,3 +61,4 @@ if __name__ == '__main__':
                      print(cmd, file=sys.stderr)
                      sys.stderr.flush()
                      os.system(cmd)
+

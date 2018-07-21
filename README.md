@@ -1,6 +1,7 @@
 shadowsocks-rm manyuser for shadowsocks-panel
 ----------------
 
+
 Install
 -------
 
@@ -54,8 +55,10 @@ Example:
 
 TestRun `cd shadowsocks` ` python servers.py` not server.py
 
+
 if no exception server will startup. you will see such like
 Example:
+
 
     add: {"server_port": XXXXX, "password":"XXXXX", "method":"xxxxx"}
 
@@ -71,6 +74,7 @@ Database user table column
 `flow_up` upload transfer
 
 `flow_down` download transfer (upload & download in here now)
+
 
 `transfer` if flow_up + flow_down > transfer this server will be stop (db_transfer.py del_server_out_of_bound_safe)
 
