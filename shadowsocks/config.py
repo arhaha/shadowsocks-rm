@@ -1,10 +1,10 @@
 import logging
 
 #Config
-MYSQL_HOST = '202.5.18.182'
+MYSQL_HOST = 'ip_adress'
 MYSQL_PORT = 3306
 MYSQL_USER = 'sspanel'
-MYSQL_PASS = 'p@ssw0Rd'
+MYSQL_PASS = 'password'
 MYSQL_DB = 'sspanel'
 
 # Pro node 1 true , others false
